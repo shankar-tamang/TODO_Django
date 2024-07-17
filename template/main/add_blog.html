@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+
+
+{% block title %}ADD BLOG {% endblock title %}
+
+
+{% block content %}
+
+<h1>
+    Add Blog
+</h1>
+
+<div class="container-sm">
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" class="form-control" id="title" aria-describedby="emailHelp">
+           
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" name="description" class="form-control" id="description">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+
+
+{% endblock content %}
