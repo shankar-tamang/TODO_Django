@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+
+
+{% block title %}Home {% endblock title %}
+
+
+{% block content %}
+
+<h1>Login</h1>
+
+<div class="container-sm">
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" id="username" >
+           
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" id="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+
+
+
+
+{% endblock content %}
+

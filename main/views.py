@@ -5,7 +5,6 @@ from main.models import TODO
 
 def home(request):
     todos = TODO.objects.all()
-    print(todos)
     return render(request, 'main/home.html', {'todos':todos})
 
 
