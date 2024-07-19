@@ -5,7 +5,10 @@ from main.models import TODO
 
 def home(request):
     todos = TODO.objects.all()
-    return render(request, 'main/home.html', {'todos':todos})
+    if request.user.is_authenticated:
+        return render(request, 'main/home.html', {'todos':todos})
+    else:
+        return redirect('signin')
 
 
 def contact(request):
